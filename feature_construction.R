@@ -2,6 +2,14 @@
 library(FSelector)
 library(mlbench)
 
+#
+# extracts features from the document term matrix
+# features extracted are mainly the frequent words in the received tweets
+# input: 
+#       dtm - a DocumentTermMatrix object
+# returns: 
+#       a data frame having just the terms from the feature set
+#
 extract.features = function(dtm) {
   # extract frequent terms  
   reservoir <- union(findFreqTerms(dtm, lowfreq = 10), c('love','hate'))
