@@ -25,9 +25,9 @@ External Dependencies
 The provided R scripts depend on follwing packages:
 	- FSelector
 	- mlbench
-	- RMOA, rJava
+	- RMOA, rJava, RMOAJars
 	- twitteR, RCurl
-	- tm, SnowballC
+	- tm, SnowballC, NLP
 
 Executing the Script
 ====================

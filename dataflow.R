@@ -10,6 +10,8 @@ source("training.R")
 
 # retrive tweets and preprocess
 print("Fetching tweets")
+# set twitter authentication option
+options(httr_oauth_cache=T)
 tweets = retrieve.tweets(n=500)
 tweets$text <- sapply(tweets$text,function(row) iconv(row, "latin1", "ASCII", sub=""))
 vc_tweets = Corpus(VectorSource(as.character(tweets$text)))
@@ -46,7 +48,7 @@ table(predictions,tweets.tdm.df[,ncol(tweets.tdm.df)])
 # Testing using test data that was set aside initially
 # convert test data (Document-term matrix) into data frame
 #
-print("Fetching Tweets")
+print("Fetching Test Tweets")
 testTweets <- retrieve.tweets(n=100)
 testTweets$text <- sapply(testTweets$text,function(row) iconv(row, "latin1", "ASCII", sub=""))
 vc_tweets = Corpus(VectorSource(as.character(testTweets$text)))

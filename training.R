@@ -1,5 +1,4 @@
 library(RMOA)
-#library(kernlab)
 gl.fmla <- NULL
 
 #
