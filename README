@@ -7,23 +7,25 @@ Team Members
 
 Description
 ===========
-Retrieves tweets from twitter, extracts features and builds model. This model is used for prediction of new tweets
-that are read from twitter. After prediction, new tweets are used to update the model.
+Retrieves tweets from twitter, extracts features and builds model. This model 
+is used for prediction of new tweets that are read from twitter. After 
+prediction, new tweets are used to update the model.
 
 Installation
 ============
-As a part of this project, five R code files are submitted. Please keep them in SAME directory.
+As a part of this project, five R code files are submitted. Please keep them in
+SAME directory.
 
-dataflow2.R - This is the main driver module of the project.
-data_retrieval.R, preprocessing.R, feature_construction.R and training.R: These code files contain the supporting 
-function calls that are made by dataflow2.R
+dataflow.R - This is the main driver module of the project.
+data_retrieval.R, preprocessing.R, feature_construction.R and training.R: These 
+code files contain the supporting function calls that are made by dataflow.R
 
 External Dependencies
 ---------------------
-The provided R script(s) depends on follwing packages:
+The provided R scripts depend on follwing packages:
 	- FSelector
 	- mlbench
-	- RMOA
+	- RMOA, rJava
 	- twitteR, RCurl
 	- tm, SnowballC
 
@@ -31,11 +33,13 @@ Executing the Script
 ====================
 RStudio
 -------
-	- If you are using RStudio, then set your working directory (setwd) to the directory containing these files.
-	- Open dataflow2.R
+	- If you are using RStudio, then set your working directory (setwd) to 
+	  the directory containing these files.
+	- Open dataflow.R
 	- Select the code and hit run button in top right corner of the editor
 
 Command line
 ------------
-	- Go to the working directory where the files are stored (make sure you are in the same directory as the files)
-	- Execute command "Rscript dataflow2.R"
+	- Go to the working directory where the files are stored (make sure you 
+	  are in the same directory as the files)
+	- Execute command "Rscript dataflow.R"
